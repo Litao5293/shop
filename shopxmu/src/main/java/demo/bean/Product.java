@@ -28,8 +28,9 @@ public class Product {
 	private Float price;//原价
 	private Float discount;//折扣 不打折时是10
 	private String description;//商品描述
-	
+	private double subtotal;//商品小计
 	private Integer sortid;//类别ID
+	
 	@ManyToOne
 	@JoinColumn(name="sortid",insertable=false,updatable=false)
 	private Sort sort;
@@ -41,7 +42,12 @@ public class Product {
 	@OneToMany(mappedBy="product",fetch=FetchType.EAGER)
 	@JsonIgnore
 	private Set<Collect> collects = new HashSet<Collect>();
-	
+	public double getSubtotal() {
+		return  procount*(getDiscount()*getPrice());
+	}
+	public void setSubtotal(double subtotal) {
+		this.subtotal = subtotal;
+	}
 	
 	public Set<Collect> getCollects() {
 		return collects;

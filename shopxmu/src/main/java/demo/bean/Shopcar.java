@@ -41,6 +41,15 @@ public class Shopcar {
 	@JoinColumn(name="userid",insertable=false,updatable=false)
 	private Users users;
 	
+	
+	
+	
+	public Integer getShopcarID() {
+		return shopcarID;
+	}
+	public void setShopcarID(Integer shopcarID) {
+		this.shopcarID = shopcarID;
+	}
 	public Integer getProid() {
 		return proid;
 	}
@@ -91,8 +100,10 @@ public class Shopcar {
 	}
 	@Override
 	public String toString() {
-		return "Shopcar [proid=" + proid + ", userid=" + userid + ", price=" + price + ", discount=" + discount
-				+ ", count=" + count + ", createtime=" + createtime + ", product=" + product + ", users=" + users + "]";
+		return "Shopcar [shopcarID=" + shopcarID + ", proid=" + proid + ", userid=" + userid + ", price=" + price
+				+ ", discount=" + discount + ", count=" + count + ", createtime=" + createtime + ", product=" + product
+				+ ", users=" + users + "]";
 	}
+	
 	
 }

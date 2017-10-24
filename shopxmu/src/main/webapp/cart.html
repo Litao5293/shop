@@ -1,0 +1,846 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+<head >
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="/shopxmu/themes/default/easyui.css">   
+<link rel="stylesheet" type="text/css" href="/shopxmu/themes/icon.css">   
+<script type="text/javascript" src="/shopxmu/jquery-1.8.0.min.js"></script>   
+<script type="text/javascript" src="/shopxmu/jquery.easyui.min.js"></script>
+<script type="text/javascript">
+   function deletepro(){
+	   var proid=$("input[name='proid']").val();
+	   console.log("id",proid);
+// 	   $.getJSON('/shopxmu/shopcar/delete.sw',{},function(data){
+		  
+// 	   })
+	   
+   }
+
+</script>
+	   
+  
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>购物车</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <!-- all css here -->
+        <!-- bootstrap v3.3.6 css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- animate css -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- jquery-ui.min css -->
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <!-- meanmenu css -->
+        <link rel="stylesheet" href="css/meanmenu.min.css">
+        <!-- nivo slider css -->
+        <link rel="stylesheet" href="lib/css/nivo-slider.css" type="text/css" />
+        <link rel="stylesheet" href="lib/css/preview.css" type="text/css" />
+        <!-- owl.carousel css -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <!-- font-awesome css -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- style css -->
+        <link rel="stylesheet" href="style.css">
+        <!-- responsive css -->
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- modernizr js -->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+
+
+
+        <!--header top area start-->
+        <div class="header_area">
+            <div class="header_border">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="header_heaft_area">
+                                <div class="header_left_all">
+                                    <div class="mean_al_dv">
+                                        <div class="littele_menu"><p>中文</p> </div>
+                                        
+                                    </div>
+                           
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="header_right_area">
+                                <ul>
+                                    <li>
+                                        <a class="account" href="#">我的账户信息</a>
+                                    </li>
+                                    <li>
+                                        <a class="wishlist" href="#">收藏</a>
+                                    </li>
+                                    <li>
+                                        <a class="Shopping cart" href="cart.html">购物车</a>
+                                    </li>
+                                    <li>
+                                        <a class="Checkout" href="#">清算</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header top area end-->
+            <!--header middle area start-->
+            <div class="header_middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="logo_area">
+                                <a href="index.html"><img src="img/logo-pic/logo.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="header_all search_box_area">
+                                <form class="new_search" role="search" method="get" action="#">
+                                    <input id="mix_search" class="search-field" placeholder="输入商品关键字...." value="" name="s" title="Search for:" type="search">
+                                    <input value="Search" type="submit">
+                                    <input name="post_type" value="product" type="hidden">
+                                </form>
+                            </div>
+                            <div class="header_all shopping_cart_area">
+                                <div class="widget_shopping_cart_content">
+                                    <div class="topcart">
+                                        <a class="cart-toggler" href="">
+                                        <i class="icon"></i>
+                                        <span class="my-cart">购物车</span>
+                                        <span class="qty">2 件</span>
+                                        <span class="fa fa-angle-down"></span>
+                                        </a>
+                                        <div class="new_cart_section">
+                                            <ol class="new-list">
+                                                <!-- single item -->
+                                                <li class="wimix_area">
+                                                    <a class="pix_product" href="">
+                                                    <img alt="" src="img/product-pic/7-150x98.jpg">
+                                                    </a>
+                                                    <div class="product-details">
+                                                        <a href="#">蓝草莓</a>
+                                                        <span class="sig-price">1×$300.00</span>
+                                                    </div>
+                                                    <div class="cart-remove">
+                                                        <a class="action" href="#">
+                                                        <i class="fa fa-close"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <!-- single item -->
+                                                <!-- single item -->
+                                                <li class="wimix_area">
+                                                    <a class="pix_product" href="#">
+                                                    <img alt="" src="img/product-pic/1-150x98.jpg">
+                                                    </a>
+                                                    <div class="product-details">
+                                                        <a href="#">Duis convallis</a>
+                                                        <span class="sig-price">1×$100.00</span>
+                                                    </div>
+                                                    <div class="cart-remove">
+                                                        <a class="action" href="#">
+                                                        <i class="fa fa-close"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <!-- single item -->
+                                            </ol>
+                                            <div class="top-subtotal">
+                                                Subtotal: <span class="sig-price">$400.00</span>
+                                            </div>
+                                            <div class="cart-button">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                        展开我的购物车
+                                                        <i class="fa fa-angle-right"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                       清算                                                       <i class="fa fa-angle-right"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header bottom area start-->
+            <div class="all_menu_area">
+                <div class="menu_inner">
+                    <div class="container">
+                        <div class="full_menu clearfix">
+                            <div class="new_menu">
+                                <div class="drp-menu">
+                                    <div class="col-md-3 pr pl">
+                                        <div class="all_catagories">
+                                            <div class="enable_catagories">
+                                                <i class="fa fa-bars"></i>
+                                                <span>所有类别</span>
+                                                <i class="fa fa-angle-down"></i>
+                                            </div>
+                                        </div>
+                                        <div class="catagory_menu_area">
+                                            <div class="catagory_mega_menu">
+                                                <div class="cat_mega_start">
+                                                    <ul class="list">
+                                                        <li class="next_area">
+                                                            <a class="item_link" href="#">
+                                                            <i class="fa fa-television"></i>
+                                                            <span class="link_content">
+                                                            <span class="link_text">
+                                                            Electronics
+                                                            <span class="link_descr">Praesent accumsan elementum maximus </span>
+                                                            </span>
+                                                            </span>
+                                                            </a>
+                                                            <ul class="electronics_drpdown">
+                                                                <li class="parent">
+                                                                    <a href="#"></a>
+                                                                    <div class="mega_menu">
+                                                                         <div class="mega_menu_coloumn">
+                                                                            <ul>
+                                                                                <li><a href="#">男性</a></li>
+                                                                                <li><a href="#">帽子</a></li>
+                                                                                <li><a href="#">夹克外套</a></li>
+                                                                                <li><a href="#">鞋子&定制</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="mega_menu_coloumn">
+                                                                            <ul>
+                                                                                <li><a href="#">女性</a></li>
+                                                                                <li><a href="#">美妆</a></li>
+                                                                                <li><a href="#">服饰鞋子</a></li>
+                                                                                <li><a href="#">健康美容</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <!-- <div class="mega_menu_coloumn">
+                                                                            <ul>
+                                                                                <li class="mega_content"><a href="#"></a></li>
+                                                                                <li><a href="#">Hobbies</a></li>
+                                                                                <li><a href="#">networking</a></li>
+                                                                                <li><a href="#">accessories</a></li>
+                                                                                <li><a href="#">electronics</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="mega_menu_coloumn">
+                                                                            <ul>
+                                                                                <li><a href="#">Laptops & Accessories</a></li>
+                                                                                <li><a href="#">hoodies</a></li>
+                                                                                <li><a href="#">watches</a></li>
+                                                                                <li><a href="#">flashlights</a></li>
+                                                                                <li><a href="#">mirriors</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                         -->
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="differ_sec_area">
+                                                            <a class="item_link" href="#">
+                                                            <i class="fa fa-mobile"></i>
+                                                            <span class="link_content">
+                                                            <span class="link_text">
+                                                          智能平板&手机
+                                                            <span class="link_descr">为您精选电子商品 </span>
+                                                            </span>
+                                                            </span>
+                                                            </a>
+                                                            <ul class="another_drop_menu">
+                                                                <li class="discrip">
+                                                                    <a class="new_link_2 with_icon" href="#" tabindex="1">Posters</a>
+                                                                    <ul class="new_miup_menu">
+                                                                        <li>
+                                                                            <ul class="new_mixup_tm">
+                                                                                <li class="exact">
+                                                                                    <a class="new_link_8 with_icon" href="#" tabindex="1">Cocktail</a>
+                                                                                    <ul class="decent_mean_menu">
+                                                                                        <li>
+                                                                                            <ul class="new_mixup_tm">
+                                                                                                <li>
+                                                                                                    <a href="#"></a>Cost & Jackets
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li><a href="#">Furniture</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="risk">
+                                                                    <a class="new_link_2 new_link_3 with_icon" href="#" tabindex="1">Watches
+                                                                    </a>
+                                                                    <ul class="new_miup_menu">
+                                                                        <li>
+                                                                            <ul class="new_mixup_tm">
+                                                                                <li><a href="#">Women's</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#">Pendants</a></li>
+                                                                <li><a href="#">Chocklates</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="differ_sec_area">
+                                                            <a class="item_link " href="#">
+                                                            <i class="fa fa-gift"></i>
+                                                            <span class="link_content">
+                                                            <span class="link_text">
+                                                            Health & Beauty
+                                                            <span class="link_descr">Praesent accumsan elementum maximus</span>
+                                                            </span>
+                                                            </span>
+                                                            </a>
+                                                            <ul class="another_drop_menu">
+                                                                <li class="discrip">
+                                                                    <a class="new_link_2 new_link_4 with_icon" href="#" tabindex="1">
+                                                                    <i class="fa fa-futbol-o"></i>
+                                                                    运动&户外
+                                                                    </a>
+                                                                </li>
+                                                                <li class="discrip">
+                                                                    <a class="new_link_2 new_link_4 with_icon" href="#" tabindex="1">
+                                                                    <i class="fa fa-bullseye"></i>
+                                                                    Bags, Shoes & Accessories
+                                                                    </a>
+                                                                </li>
+                                                                <li class="discrip"><a class="new_link_2 new_link_4 with_icon" href="#" tabindex="1"><i class="fa fa-file-image-o"></i>
+                                                                    Toys & Hobbies</a>
+                                                                </li>
+                                                                <li class="discrip">
+                                                                    <a class="new_link_2 new_link_4 with_icon" href="#" tabindex="1"><i class="fa fa-television"></i>
+                                                                    Computer & Networking</a>
+                                                                </li>
+                                                                <li class="discrip">
+                                                                    <a class="new_link_2 new_link_4 with_icon" href="#" tabindex="1">
+                                                                    <i class="fa fa-laptop"></i>
+                                                                    Laptops & Accessories
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a class="item_link item_link_2" href="#">
+                                                            <i class="fa fa-heart"></i>
+                                                            <span class="link_content">
+                                                            <span class="link_text">
+                                                            Jewelry & Watches
+                                                            <span class="link_descr">Praesent accumsan elementum maximus</span>
+                                                            </span>
+                                                            </span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="item_link item_link_2" href="#">
+                                                            <i class="fa fa-star"></i>
+                                                            <span class="link_content">
+                                                            <span class="link_text">
+                                                            Flashlights & Lamps
+                                                            <span class="link_descr">Praesent accumsan elementum maximus</span>
+                                                            </span>
+                                                            </span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="item_link item_link_2" href="#">
+                                                            <i class="fa fa-lightbulb-o"></i>
+                                                            <span class="link_content">
+                                                            <span class="link_text">
+                                                            Headlight
+                                                            <span class="link_descr">Praesent accumsan elementum maximus</span>
+                                                            </span>
+                                                            </span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="cost-menu">
+                                                            <a class="item_link item_link_2" href="#">
+                                                            <i class="fa fa-pie-chart"></i>
+                                                            <span class="link_content">
+                                                            <span class="link_text">
+                                                            Cost & jackets
+                                                            <span class="link_descr">Praesent accumsan elementum maximus </span>
+                                                            </span>
+                                                            </span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="showmore-items shwitm">
+                                                            <i class="fa fa-plus-square-o"></i>
+                                                            <span>More Categories</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--menu area start-->
+                                    <div class="col-md-9 pl">
+                                        <div class="menu_area">
+                                            <div class="menu">
+                                                <nav>
+                                                    <ul>
+                                                        <li><a href="index.html">主页</a></li>
+														<!-- <li><a href="about-us.html">关于</a></li> -->
+														<li><a href="cart.html">购物车</a></li>
+														<!-- <li><a href="list-view.html">名单</a></li> -->
+														<li><a href="my.account.html">账户</a></li>
+														<li><a href="simple-product.html">产品</a></li>
+														<li><a href="contact-us.html">联系我们</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header area end-->
+        <!-- mobile-menu-area-start -->
+        <div class="mobile-menu-area hidden-md hidden-lg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="mobile-menu">
+                            <nav id="mobile-menu-active">
+                                <ul id="nav">
+                                    <li><a href="index.html">Home</a></li>
+									
+									<li><a href="cart.html">Cart</a></li>
+									
+									<li><a href="my.account.html">Account</a></li>
+									<li><a href="simple-product.html">Product</a></li>
+									<li><a href="contact-us.html">Contact us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+             
+        <!--social design arae end-->
+        <!-- shop area start-->
+        <div class="shop_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="shop_menu">
+                            <ul class="cramb_area cramb_area_2 ">
+                                <li><a href="index.html">主页 /</a></li>
+                                <li><a href="cart.html">购物车</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- shop area end-->
+        <div class="shopping_cart">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="account_heading account_heading_ah">
+                            <h1>购物车</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="all_wis_frm">
+                        <div class="col-md-12">
+                            <div class="wishlist-content wishlist-content-2">
+                                <form action="#">
+                                    <div ng-app="myapp" class="wishlist-table wishlist-table-2 table-responsive">
+                                        <table id="prolist" ng-controller="carController">
+                                            <thead>
+                                                <tr>
+                                                 <th class="product-remove"><span class="nobr">操作</span></th> 
+                                                    <th class="product-thumbnail product-thumbnail-2"></th>
+                                                    <th class="product-name product-name_2"><span class="nobr">产品</span></th>
+                                                    <th class="product-price"><span class="nobr"> 价格</span></th>
+                                                    <th class="product-stock-stauts"><span class="nobr"> 数量 </span></th>
+                                                    <th class="product-add-to-cart"><span class="nobr">总计</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="probody">
+                                                <tr ng-repeat="v in listData" >
+                                                <!-- 显示商品 -->
+                                                 <td class="product-remove product-remove_2"><a href="/shopxmu/shopcar/delete.sw?shopcarid={{v.shopcarID}}"  ><input type="hidden" value="{{v.proID}}" name="proid">×</a></td>  
+                                                    <td class="product-thumbnail product-thumbnail-2"><a href="#"><img src="{{v.product.proImg}}" alt="" /></a></td>
+                                                    <td class="product-name product-name_2">{{v.product.proname}}</td>
+                                                    <td class="product-price"><span class="amount-list amount-list-2" >{{v.product.price*v.product.discount}}</span></td>
+                                                    <td class="product-stock-status">
+                                                        <div class="latest_es_from_2">
+                                                          <input type="number" value="{{v.product.procount}}" > 
+                                                               
+                                                        </div>
+                                                    </td>
+                                                    <td class="product-price"><span class="amount-list amount-list-2">{{v.product.subtotal}}</span></td>
+                                                </tr>
+                                               
+                                            </tbody>
+                                            <tfoot>
+<!--                                                 <tr> -->
+<!--                                                     <td colspan="6"> -->
+<!--                                                         <div class="coupon"> -->
+<!--                                                             <label for="coupon_code"></label> -->
+                                                            
+                                                           
+<!--                                                             <a class="button_act btn-tip " href="#">编辑购物车</a> --> 
+<!--                                                         </div> -->
+<!--                                                     </td> -->
+<!--                                                 </tr> -->
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </form>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="cart_totals ">
+                                            <h2>购物车总计</h2>
+                                            <table class="shop_table shop_table_responsive">
+                                                <tbody>
+                                                    <tr class="cart-subtotal">
+                                                        <th>Samsung Note3</th>
+                                                        <td data-title="Subtotal">
+                                                            <span class="woocommerce-Price-amount amount">
+                                                            <span class="woocommerce-Price-currencySymbol">$</span>
+                                                            800.00
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="order-total">
+                                                        <th>总计</th>
+                                                        <td data-title="Total">
+                                                            <strong>
+                                                            <span class="woocommerce-Price-amount amount">
+                                                            <span class="woocommerce-Price-currencySymbol">$</span>
+                                                            800.00
+                                                            </span>
+                                                            </strong>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="wc-proceed-to-checkout">
+                                                <a class="button_act button_act-tc " href="#">	开始清算</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--brand area start-->
+        <div class="logo_area">
+            <div class="container">
+                <div class="row">
+                    <div class="brand brand-2">
+                        <div class="new_product new_product_nx">
+                            <div class="product_heading product_heading_tf">
+                                <i class="fa fa-coffee"></i>
+                                <span>Brand Logo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="main_brand main_brand_tf">
+                            <div class="all_brand indicator-brand indicator-brand-7">
+                                <div class="col-md-12">
+                                    <div class="brand_pix">
+                                        <img src="img/brand-logo/logo_1.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="brand_pix">
+                                        <img src="img/brand-logo/logo_2.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="brand_pix">
+                                        <img src="img/brand-logo/logo_3.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="brand_pix">
+                                        <img src="img/brand-logo/logo_4.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="brand_pix">
+                                        <img src="img/brand-logo/logo_5.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="brand_pix">
+                                        <img src="img/brand-logo/logo_6.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="brand_pix">
+                                        <img src="img/brand-logo/logo_3.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--brand area end-->
+        <!--newsletter area start-->
+        <div class="all_news_letter">
+            <div class="news_letter">
+                <div class="news_middele">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="news_heading">
+                                    <h3> newsletter </h3>
+                                </div>
+                                <div class="full_form">
+                                    <form id="form-newsletter1" class="widget_wysija" method="post" action="#wysija">
+                                        <p class="wysija-paragraph">
+                                            <input name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="Enter Your Mail..." placeholder="Enter Your Mail..." value="" id="form-validation-field-0" style="" type="text">
+                                        </p>
+                                        <input class="wysija-submit wysija-submit-field" value="Subscribe!" type="submit">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <div class="news_right">
+                                    <div class="news_heading news_heading_3">
+                                        <h3>Follow us:</h3>
+                                    </div>
+                                    <ul class="social-icons">
+                                        <li>
+                                            <a class="facebook social-icon" href="#facebook" title="" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
+                                            <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="twitter social-icon" href="#twitter.com" title="" target="_blank" data-toggle="tooltip" data-original-title="Twitter">
+                                            <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="google-plus social-icon" href="#google-plus" title="" target="_blank" data-toggle="tooltip" data-original-title="Google-plus">
+                                            <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="youtube social-icon" href="#youtube" title="" target="_blank" data-toggle="tooltip" data-original-title="Youtube">
+                                            <i class="fa fa-youtube"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="social-icon instagram" href="#" title="" target="_blank" data-toggle="tooltip" data-original-title="instagram">
+                                            <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--newsletter area end-->
+        <!--footer top area start-->
+        <div class="footer_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer_menu">
+                            <div class="news_heading_2">
+                                <h3>Information </h3>
+                            </div>
+                            <div class="footer_menu">
+                                <ul>
+                                    <li>
+                                        <a href="#">our blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">about our shop</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">secure shopping</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">privecy policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer_menu">
+                            <div class="news_heading_2">
+                                <h3>My Account </h3>
+                            </div>
+                            <div class="footer_menu">
+                                <ul>
+                                    <li>
+                                        <a href="#">My Account</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wishlist</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shopping Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Checkout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer_menu">
+                            <div class="news_heading_2">
+                                <h3> Our Services </h3>
+                            </div>
+                            <div class="footer_menu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Shipping & Returns</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Secure Shopping</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">International Shipping</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Affiliates</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer_menu footer_menu_2">
+                            <div class="news_heading_2">
+                                <h3> Store Information </h3>
+                            </div>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-home"></i>
+                                    <p>My Company : 42 avenue des Champs Elysées 75000 France</p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    <p>Phone: (0123) 456789</p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope"></i>
+                                    <p>Email: admin@hastech.company</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer top area end-->
+            <!--footer middle area start-->
+            <div class="footer_middle">
+                <div class="container">
+                    <div class="fotter_inner">
+                        <div class="middele_pic">
+                            <img src="img/icon/payment-300x30.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer middle area end-->
+        <!--footer bottom area start-->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="widget-copyright text-center">
+                    Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+                </div>
+            </div>
+        </div>
+		<!--footer bottom area end-->
+		
+		
+		
+		
+		
+        <!-- all js here -->
+        <!-- jquery latest version -->
+        <script src="js/vendor/jquery-1.12.0.min.js"></script>
+        <!-- bootstrap js -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- nivo slider js -->
+        <script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
+        <script src="lib/home.js" type="text/javascript"></script>
+        <!-- owl.carousel js -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- meanmenu js -->
+        <script src="js/jquery.meanmenu.js"></script>
+        <!-- jquery-ui js -->
+        <script src="js/jquery-ui.min.js"></script>
+        <!-- easing js -->
+        <script src="js/jquery.easing.1.3.js"></script>
+        <!-- mixitup js -->
+        <script src="js/jquery.mixitup.min.js"></script>
+        <!-- jquery.countdown js -->
+        <script src="js/jquery.countdown.min.js"></script>
+        <!-- wow js -->
+        <script src="js/wow.min.js"></script>
+        <!-- popup js -->
+        <script src="js/jquery.magnific-popup.min.js"></script> 
+        <!-- plugins js -->
+        <script src="js/plugins.js"></script>
+        <!-- main js -->
+        <script src="js/main.js"></script>
+    </body>
+<script type="text/javascript" src="/shopxmu/angular.min.js"></script>
+<!-- <script type="text/javascript" src="/shopxmu/angular-ui-router.min.js"></script> -->
+<!-- <script type="text/javascript" src="/shopxmu/myapp.js"></script> -->
+<!-- <script type="text/javascript" src="/shopxmu/controllers/cartController.js"></script> -->
+<!-- <script type="text/javascript" src="/shopxmu/services/cartService.js"></script> -->
+ <script> 
+    var myapp=angular.module("myapp",[]);
+     myapp.controller("carController",function($scope,$http){
+     	$scope.listData=[];
+     	$http.get('/shopxmu/shopcar/list.sw').then(function(response){
+     		console.log("222");
+   		$scope.listData=response.data;
+    	},function(response){
+     		console.log("失败")
+     	})
+     })
+</script> 
+
+</html>
+
+

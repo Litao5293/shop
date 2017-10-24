@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import demo.bean.Users;
 import demo.dao.BeanDao;
 
 @Service("beanservice")
@@ -35,4 +36,12 @@ public class BeanService {
 		return beanDao.find(hql, params);
 	}
 	
+//	//µÇÂ¼
+//	public Users login(Users user){
+//		return beanDao.login(user);
+//	}
+//	//×¢²á
+//	public Users adduser(Users user){
+//		return beanDao.adduser(user);
+//	}
 }
