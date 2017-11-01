@@ -27,16 +27,9 @@ public class Sort {
 	@JsonIgnore
 	private Set<Product> products = new HashSet<Product>(); 
 	
-	@OneToMany(mappedBy="sort",fetch=FetchType.EAGER)
-	@JsonIgnore
-	private Set<Orders> orders = new HashSet<Orders>(); 
 	
-	public Set<Orders> getOrders() {
-		return orders;
-	}
-	public void setOrders(Set<Orders> orders) {
-		this.orders = orders;
-	}
+	
+	
 	public Set<Product> getProducts() {
 		return products;
 	}

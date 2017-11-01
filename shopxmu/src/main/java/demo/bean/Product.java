@@ -42,6 +42,18 @@ public class Product {
 	@OneToMany(mappedBy="product",fetch=FetchType.EAGER)
 	@JsonIgnore
 	private Set<Collect> collects = new HashSet<Collect>();
+	
+	@OneToMany(mappedBy="product",fetch=FetchType.EAGER)
+	@JsonIgnore
+	private Set<Orders> orderss = new HashSet<Orders>(); 
+	
+	
+	public Set<Orders> getOrderss() {
+		return orderss;
+	}
+	public void setOrderss(Set<Orders> orderss) {
+		this.orderss = orderss;
+	}
 	public double getSubtotal() {
 		return  procount*(getDiscount()*getPrice());
 	}

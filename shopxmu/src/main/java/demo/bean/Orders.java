@@ -38,12 +38,12 @@ public class Orders {
 	private Float price;//购买时的原价
 	private Float discount;//购买时的折扣
 	private Integer count;//购买的数量
-	private Integer sortID;//商品id
+	private Integer ProID;//商品id
 	private Integer userid;//用户id
 	private Integer pid;//收货地址id
 	@ManyToOne
-	@JoinColumn(name="sortID",insertable=false,updatable=false)
-	private Sort sort;
+	@JoinColumn(name="ProID",insertable=false,updatable=false)
+	private Product product;
 	
 	@ManyToOne
 	@JoinColumn(name="userid",insertable=false,updatable=false)
@@ -114,11 +114,12 @@ public class Orders {
 	public void setTotime(Date totime) {
 		this.totime = totime;
 	}
-	public Integer getSortID() {
-		return sortID;
+	
+	public Integer getProID() {
+		return ProID;
 	}
-	public void setSortID(Integer sortID) {
-		this.sortID = sortID;
+	public void setProID(Integer proID) {
+		ProID = proID;
 	}
 	public Integer getUserid() {
 		return userid;
@@ -132,11 +133,12 @@ public class Orders {
 	public void setPid(Integer pid) {
 		this.pid = pid;
 	}
-	public Sort getSort() {
-		return sort;
+	
+	public Product getProduct() {
+		return product;
 	}
-	public void setSort(Sort sort) {
-		this.sort = sort;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 	public Users getUsers() {
 		return users;
@@ -148,8 +150,8 @@ public class Orders {
 	public String toString() {
 		return "Orders [orderID=" + orderID + ", onumber=" + onumber + ", tag=" + tag + ", time=" + time + ", payment="
 				+ payment + ", totime=" + totime + ", price=" + price + ", discount=" + discount + ", count=" + count
-				+ ", sortID=" + sortID + ", userid=" + userid + ", pid=" + pid + ", sort=" + sort + ", users=" + users
-				+ "]";
+				+ ", ProID=" + ProID + ", userid=" + userid + ", pid=" + pid + ", product=" + product + ", users="
+				+ users + ", evaluates=" + evaluates + "]";
 	}
 	
 	
