@@ -27,8 +27,9 @@ public class ShopcarControllerZsx {
 	@ResponseBody
 	public Object list(HttpSession session){
 		 Integer Id =(Integer)session.getAttribute("userID");
+		 System.out.println("购物车"+service.find("select p from Shopcar p  where p.userid="+Id+"", null));
 		 return service.find("select p from Shopcar p  where p.userid="+Id+"", null);
-	
+	 
 	} 
 	
 	//将商品添加到购物车
