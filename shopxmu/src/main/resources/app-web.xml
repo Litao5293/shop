@@ -10,13 +10,13 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 	
 	<context:annotation-config></context:annotation-config>
-	<context:component-scan base-package="demo.web"></context:component-scan>
+	<context:component-scan base-package="demo.web,demolt.web"></context:component-scan>
 	
 	<mvc:annotation-driven conversion-service="conversionService"/>
 	<bean id="conversionService" class="org.springframework.format.support.DefaultFormattingConversionService"></bean>
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/com/"></property>
+		<property name="prefix" value="/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	

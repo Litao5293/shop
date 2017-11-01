@@ -44,6 +44,7 @@ public class Orders {
 	@ManyToOne
 	@JoinColumn(name="sortID",insertable=false,updatable=false)
 	private Sort sort;
+	
 	@ManyToOne
 	@JoinColumn(name="userid",insertable=false,updatable=false)
 	private Users users;
