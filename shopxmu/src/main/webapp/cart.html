@@ -7,15 +7,11 @@
 <script type="text/javascript" src="/shopxmu/jquery-1.8.0.min.js"></script>   
 <script type="text/javascript" src="/shopxmu/jquery.easyui.min.js"></script>
 <script type="text/javascript">
-   function deletepro(){
-	   var proid=$("input[name='proid']").val();
-	   console.log("id",proid);
-// 	   $.getJSON('/shopxmu/shopcar/delete.sw',{},function(data){
-		  
-// 	   })
-	   
-   }
 
+function deletepro(){
+	   var proid=$("input[name='proid']").val();
+	   console.log("id",proid); 
+}
 </script>
 	   
   
@@ -456,7 +452,7 @@
         </div>
         <!-- shop area end-->
         <div class="shopping_cart">
-            <div class="container">
+            <div class="container"> 
                 <div class="row">
                     <div class="col-md-12">
                         <div class="account_heading account_heading_ah">
@@ -478,23 +474,24 @@
                                                     <th class="product-name product-name_2"><span class="nobr">产品</span></th>
                                                     <th class="product-price"><span class="nobr"> 价格</span></th>
                                                     <th class="product-stock-stauts"><span class="nobr"> 数量 </span></th>
-                                                    <th class="product-add-to-cart"><span class="nobr">总计</span></th>
+                                                    <th class="product-add-to-cart"><span class="nobr">小计</span></th>
+                                                    <th><a href="">操作</a></th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="probody">
+                                            <tbody >
                                                 <tr ng-repeat="v in listData" >
                                                 <!-- 显示商品 -->
-                                                 <td class="product-remove product-remove_2"><a href="/shopxmu/shopcar/delete.sw?shopcarid={{v.shopcarID}}"  ><input type="hidden" value="{{v.proID}}" name="proid">×</a></td>  
+                                                    <td class="product-remove product-remove_2"><a href="/shopxmu/shopcar/delete.sw?shopcarid={{v.shopcarID}}"  ><input type="hidden" value="{{v.proID}}" name="proid">×</a></td>  
                                                     <td class="product-thumbnail product-thumbnail-2"><a href="#"><img src="{{v.product.proImg}}" alt="" /></a></td>
                                                     <td class="product-name product-name_2">{{v.product.proname}}</td>
-                                                    <td class="product-price"><span class="amount-list amount-list-2" >{{v.product.price*v.product.discount}}</span></td>
-                                                    <td class="product-stock-status">
-                                                        <div class="latest_es_from_2">
-                                                          <input type="number" value="{{v.product.procount}}" > 
-                                                               
-                                                        </div>
+                                                    <td class="product-price"><span class="amount-list amount-list-2" >{{v.product.price*v.product.discount | number:2}}</span></td>
+                                                    <td >
+                                                        <button ng-click="decr(v,$event)">-</button>
+														<input type="text" value="{{v.count}}" readonly="">
+                                                        <button ng-click="incr(v,$event)">+</button>
                                                     </td>
-                                                    <td class="product-price"><span class="amount-list amount-list-2">{{v.product.subtotal}}</span></td>
+                                                    <td >{{v.count*v.product.price*v.product.discount | number:2}} </td>
+                                                    <td><a href="/shopxmu/fukuan.jsp">付款</a></td>
                                                 </tr>
                                                
                                             </tbody>
@@ -514,38 +511,7 @@
                                     </div>
                                 </form>
                                 <div class="row">
-                                    <div class="col-md-6 col-xs-12">
-                                        <div class="cart_totals ">
-                                            <h2>购物车总计</h2>
-                                            <table class="shop_table shop_table_responsive">
-                                                <tbody>
-                                                    <tr class="cart-subtotal">
-                                                        <th>Samsung Note3</th>
-                                                        <td data-title="Subtotal">
-                                                            <span class="woocommerce-Price-amount amount">
-                                                            <span class="woocommerce-Price-currencySymbol">$</span>
-                                                            800.00
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="order-total">
-                                                        <th>总计</th>
-                                                        <td data-title="Total">
-                                                            <strong>
-                                                            <span class="woocommerce-Price-amount amount">
-                                                            <span class="woocommerce-Price-currencySymbol">$</span>
-                                                            800.00
-                                                            </span>
-                                                            </strong>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <div class="wc-proceed-to-checkout">
-                                                <a class="button_act button_act-tc " href="#">	开始清算</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="col-md-6 col-xs-12">
                                     </div>
                                 </div>
@@ -824,10 +790,6 @@
         <script src="js/main.js"></script>
     </body>
 <script type="text/javascript" src="/shopxmu/angular.min.js"></script>
-<!-- <script type="text/javascript" src="/shopxmu/angular-ui-router.min.js"></script> -->
-<!-- <script type="text/javascript" src="/shopxmu/myapp.js"></script> -->
-<!-- <script type="text/javascript" src="/shopxmu/controllers/cartController.js"></script> -->
-<!-- <script type="text/javascript" src="/shopxmu/services/cartService.js"></script> -->
  <script> 
     var myapp=angular.module("myapp",[]);
      myapp.controller("carController",function($scope,$http){
@@ -835,10 +797,34 @@
      	$http.get('/shopxmu/shopcar/list.sw').then(function(response){
      		console.log("222");
    		$scope.listData=response.data;
+   		console.log("44",$scope.listData)
     	},function(response){
      		console.log("失败")
      	})
-     })
+     	
+     	
+            //增加
+            $scope.incr = function(v,$event){
+                v.count+=1;
+                console.log("aa",v);    
+                $event.preventDefault(); 
+                $http.get('/shopxmu/shopcar/updateshu.sw',{params:{count:v.count,shopcarid:v.shopcarID}}
+                	
+     	)
+            }
+            //减少
+            $scope.decr = function(v,$event){
+                if(v.count > 1){
+                	v.count -=1;
+                }
+                $event.preventDefault(); //阻止刷新事件发生
+                $http.get('/shopxmu/shopcar/updateshu.sw',{params:{count:v.count,shopcarid:v.shopcarID}})
+            }
+     	}
+     );
+
+    
+    
 </script> 
 
 </html>
