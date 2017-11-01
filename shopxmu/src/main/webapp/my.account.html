@@ -52,7 +52,22 @@
         	
         }
         
-        
+        function zhuce(){
+        	console.log(111)
+        	var uname=$("input[name='uname']").val();
+        	var pwd1=$("input[name='pwd1']").val();
+        	$.ajax({
+        		type:'POST',
+        		url:'/shopxmu/userlogin/zhuce.sw',
+        		data:{
+        			"uname":uname,
+        			"pwd1":pwd1
+        		},
+        		success:function(data){
+        			console.log("成功");
+        		}
+        	});
+        }
         
         </script>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -609,26 +624,26 @@
                             <div class="frm_content">
                                 <h2>注册</h2>
                             </div>
-                            <form>
+                            <form action="/shopxmu/userlogin/zhuce.sw" method="POST">
                                 <div class="al_form-fields">
                                     <p>
                                         <label>
                                        账号
                                         <span class="required">*</span>
                                         </label>
-                                        <input type="text">
+                                        <input type="text" name="uname">
                                     </p>
                                     <p>
                                         <label>
                                         密码
                                         <span class="required">*</span>
                                         </label>
-                                        <input type="password">
+                                        <input type="password" name="pwd1">
                                     </p>
                                 </div>
                                 <div class="form-action">
                                     <div class="new_act new_act_3">
-                                        <a class="button_act button_act_3">注册</a>
+                                        <button class="button_act button_act_3" type="submit">注册</button>
                                     </div>
                                 </div>
                             </form>
